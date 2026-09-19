@@ -1,1 +1,11 @@
-
+phases:
+  install:
+    runtime-versions:
+      java: corretto17 # or corretto11 / corretto21
+  build:
+    commands:
+      - echo Building the Java application...
+      - mvn clean package
+artifacts:
+  files:
+    - target/*.jar
